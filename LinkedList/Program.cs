@@ -25,11 +25,11 @@ namespace LinkedList
             //here is merging to given two linked list (destiniy listItem1, source listItemA)
             manager.MergeLinkedList(listItem1, listItemA);
 
-            //this value list is created for keep all values (ordered ascending values) in the linked list.
+            //this value list is created for keeping all values in the linked list.
             var values = new List<int>();
 
             //here is doing to fill all values in the given linked list and ordering by ascending.
-            manager.FillValuesToList(values, listItem1);
+            manager.FillValuesFromListValues(values, listItem1);
 
             //here is Changing values in the list one after another. 
             manager.SetSortedValue(values.OrderBy(x=>x).ToList(), listItem1);
@@ -54,7 +54,7 @@ namespace LinkedList
 
     class LinkedListManager
     {
-        public void FillValuesToList(List<int> values, EmployeeLinkedList list)
+        public void FillValuesFromListValues(List<int> values, EmployeeLinkedList list)
         {
             
             if (list == null)
@@ -62,7 +62,7 @@ namespace LinkedList
                 return;
             }
             values.Add(list.Value);
-            FillValuesToList(values, list.Next);
+            FillValuesFromListValues(values, list.Next);
         }
 
         public void SetSortedValue(List<int> sortedList, EmployeeLinkedList list, int index = 0)
