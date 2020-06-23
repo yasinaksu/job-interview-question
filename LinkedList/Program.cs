@@ -10,15 +10,15 @@ namespace LinkedList
         {
             //[3]--[1]--[5]--null 
             EmployeeLinkedList listItem4 = null;
-            EmployeeLinkedList listItem3 = new EmployeeLinkedList(3, listItem4);
+            EmployeeLinkedList listItem3 = new EmployeeLinkedList(5, listItem4);
             EmployeeLinkedList listItem2 = new EmployeeLinkedList(1, listItem3);
-            EmployeeLinkedList listItem1 = new EmployeeLinkedList(5, listItem2);
+            EmployeeLinkedList listItem1 = new EmployeeLinkedList(3, listItem2);
 
             //[4]--[2]--[6]--[null] 
             EmployeeLinkedList listItemD = null;
-            EmployeeLinkedList listItemC = new EmployeeLinkedList(4, listItemD);
+            EmployeeLinkedList listItemC = new EmployeeLinkedList(6, listItemD);
             EmployeeLinkedList listItemB = new EmployeeLinkedList(2, listItemC);
-            EmployeeLinkedList listItemA = new EmployeeLinkedList(6, listItemB);
+            EmployeeLinkedList listItemA = new EmployeeLinkedList(4, listItemB);
 
             var manager = new LinkedListManager();
 
@@ -28,7 +28,7 @@ namespace LinkedList
             //this value list is created for keeping all values in the linked list.
             var values = new List<int>();
 
-            //here is doing to fill all values in the given linked list and ordering by ascending.
+            //here is doing to fill all values in the given linked list 
             manager.FillValuesFromListValues(values, listItem1);
 
             //here is Changing values in the list one after another. 
